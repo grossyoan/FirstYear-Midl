@@ -41,7 +41,7 @@ function draw() {   // dessins
     ctx.stroke();
     ctx.closePath();
   }
-  if (pixelData[3] == 0){
+  if (pixelData[0] == 255 && pixelData[1] == 255 && pixelData[2] == 255){
     drawCount+=1;
     console.log(drawCount);
   }

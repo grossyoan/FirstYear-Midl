@@ -3,6 +3,7 @@ $("#menuColor1").click(function(){
   $("#menuColor1").hide(600);
   $("#arcade").delay(600).toggle(500);
   randomCanvas();
+  init();
 });
 $("#menuColor2").click(function(){
   $("#menuColor1").hide(600);

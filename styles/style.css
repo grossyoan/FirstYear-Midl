@@ -41,6 +41,7 @@ body{
   width:100%;
   height:100%;
   display: none;
+  text-align: center;
 }
 #relax{
   background:#fab1a0;
@@ -48,7 +49,6 @@ body{
   height:100%;
   display:none;
 }
-
 #arcadeCanvas{
-  margin:0 auto;
+  margin-left: 150px;
 }
