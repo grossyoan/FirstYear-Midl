@@ -1,0 +1,32 @@
+body{
+  background: #FFFAFA;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4em;
+}
+
+#game{
+  margin: 0 auto;
+  width:960px;
+  height:500px;
+}
+#gameSelection{
+  display:flex;
+  height:500px;
+}
+#menuColor1{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffeaa7;
+  width:50%;
+  height:100%;
+}
+
+#menuColor2{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  background:#fab1a0;
+  width:50%;
+  height:100%;
+}
