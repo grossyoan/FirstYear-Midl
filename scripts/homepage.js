@@ -1,9 +1,11 @@
 $("#menuColor1").click(function(){
-  $('#menuColor2').css('display', 'none');
-  $('#menuColor1').css('width', '100%');
+  $("#menuColor2").hide(600);
+  $("#menuColor1").hide(600);
+  $("#arcade").delay(600).toggle(500);
+  randomCanvas();
 });
 $("#menuColor2").click(function(){
-  $('#menuColor1').css('display', 'none');
-  $('#menuColor2').css('width', '100%');
-
+  $("#menuColor1").hide(600);
+  $("#menuColor2").hide(600);
+  $("#relax").delay(600).toggle(500);
 });
