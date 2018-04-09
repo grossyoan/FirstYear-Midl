@@ -22,7 +22,7 @@ body{
   transition: width 1s ease;
 }
 #menuColor1:hover {
-    width: 100%;
+  width: 100%;
 }
 #menuColor2{
   display:flex;
@@ -49,9 +49,6 @@ body{
   display:none;
 }
 
-
 #arcadeCanvas{
   margin:0 auto;
-  width:75%;
-  height:75%;
 }
