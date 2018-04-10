@@ -2,7 +2,7 @@ function randomCanvas(){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   //let randomCanvas = Math.floor(Math.random()*2)+1
-  let randomCanvas = 4
+  let randomCanvas = 2
   console.log(randomCanvas)
   if (randomCanvas == 1) {
     ctx.fillStyle = "white";

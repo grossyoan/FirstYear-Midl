@@ -132,7 +132,23 @@ function progressBar() {
 }
 /* Affichage du score*/
 function displayScore(){
-  let displayResult=document.querySelector('#result div');
+  let resultScore=document.querySelector('#resultScore');
   finalScore = Math.round((finalScore*10))/10;
-  displayResult.innerHTML=finalScore+'%';
+  resultScore.innerHTML=finalScore+'%';
+  let resultMessage=document.querySelector('#resultMessage');
+  if(finalScore==50){
+  resultMessage.innerHTML='Am I dreaming?!';
+  }
+  else if(finalScore<50 && finalScore>45 || finalScore>50 && finalScore<55){
+  resultMessage.innerHTML='Congrats!';
+  }
+  else if(finalScore<45 && finalScore>40 || finalScore>55 && finalScore<60){
+  resultMessage.innerHTML='Not bad!';
+  }
+  else if(finalScore<40 || finalScore>60){
+  resultMessage.innerHTML='Ouch...';
+  }
+  else if(finalScore==0 || finalScore==100){
+  resultMessage.innerHTML='Ow no...';
+  }
 }
