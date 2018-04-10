@@ -15,11 +15,15 @@ color(symbol)
 numberOfPixels(color1)
 numberOfPixels(color2)
 //function score
-let score = 0
-  for (var i = 0; i < score.length; i++) {
-    score[i] += 1
+function score {
+  if (window.prompt ("vous avez gagné")){
+    resultat = resultat + 1
+    window.prompt(resultat)
   }
-
+  else {
+    window.prompt("Vous avez perdu" + resultat)
+  }
+}
 //compare the heights of the differents parts of the symbol
 function compare{
   if (numberOfPixels(color1) < numberOfPixels(color2)) {
