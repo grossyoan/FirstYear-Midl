@@ -1,5 +1,4 @@
       /* PINCEAU */
-
 let canvas, ctx, flag = false,
     prevX = 0,
     currX = 0,
@@ -9,17 +8,15 @@ let canvas, ctx, flag = false,
     drawCount = 0;
     isDrawing = false;
     finalScore = 0;
-
+    finished = false;
 let x = "#fab1a0",
     brushSize = 20;
 
 function init() {
-    console.log('test');
     canvas = document.getElementById('arcadeCanvas');
     ctx = canvas.getContext("2d");
     w = canvas.width;
     h = canvas.height;
-
     canvas.addEventListener("mousemove", function (e) {
         findxy('move', e)
     }, false);
@@ -32,7 +29,6 @@ function init() {
     canvas.addEventListener("mouseout", function (e) {
         findxy('out', e)
     }, false);
-
 }
 
 if (isDrawing==false){
@@ -122,7 +118,7 @@ function progressBar() {
    let width = 1;
    let id = setInterval(frame, 10);
    function frame() {
-       if (width >= 100) {
+       if (width >= 100 || finished==true) {
            clearInterval(id);
        } else {
            width= width+0.15;
@@ -145,10 +141,42 @@ function displayScore(){
   else if(finalScore<45 && finalScore>40 || finalScore>55 && finalScore<60){
   resultMessage.innerHTML='Not bad!';
   }
-  else if(finalScore<40 || finalScore>60){
+  else if(finalScore<40 && finalScore>0 || finalScore>60 && finalScore<100){
   resultMessage.innerHTML='Ouch...';
   }
   else if(finalScore==0 || finalScore==100){
   resultMessage.innerHTML='Ow no...';
+  }
+}
+/* Clear Canva */
+function clearCanvas(){
+  let c = document.querySelector("canvas");
+  let ctx = c.getContext("2d");
+  ctx.clearRect(0, 0, c.width, c.height);
+}
+
+function pause(milliseconds){
+  let start = new Date().getTime();
+  for (let i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+function isFinished(){
+  if(finished==false){
+    $("#result").toggle(200);
+    scoreCount();
+    displayScore();
+    $("#myProgress").css('visibility','hidden');
+    finished=true;
+    setTimeout(function (){
+      $("#arcadeCanvas").hide();
+      clearCanvas();
+    }, 500);
+  }
+  else{
+    console.log('ok');
   }
 }
