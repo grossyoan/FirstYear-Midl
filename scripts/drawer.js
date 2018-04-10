@@ -6,8 +6,8 @@ let canvas, ctx, flag = false,
     dot_flag = false,
     drawCount = 0;
 
-let x = "black",
-    y = 5;
+let x = "#fab1a0",
+    y = 20;
 
 function init() {
     console.log('test');
@@ -32,7 +32,7 @@ function init() {
 }
 function draw() {   // dessins
   let pixelData = ctx.getImageData(currX, currY, 1, 1).data;
-  if (pixelData[0] == 255 && pixelData[1] == 255 && pixelData[2] == 255){
+  if ((pixelData[0] == 255 && pixelData[1] == 255 && pixelData[2] == 255) || (pixelData[0] == 250 && pixelData[1] == 177 && pixelData[2] == 160)) {
     ctx.beginPath();
     ctx.moveTo(prevX, prevY);
     ctx.lineTo(currX, currY);

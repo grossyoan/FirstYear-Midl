@@ -4,6 +4,8 @@ $("#menuColor1").click(function(){
   $("#arcade").delay(600).toggle(500);
   randomCanvas();
   init();
+  countPixel();
+
 });
 $("#menuColor2").click(function(){
   $("#menuColor1").hide(600);
