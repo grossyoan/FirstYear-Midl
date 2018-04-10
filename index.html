@@ -5,27 +5,38 @@
     <meta name="description" content="Probably a game"/>
     <title>Will be a game</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/style.css"/>
   </head>
   <body>
     <div id="game">
       <div id="gameSelection">
         <div id="menuColor1">
-          <span>Arcade</span>
+          <span class="gameSelectionText">Arcade</span>
         </div>
         <div id="menuColor2">
-          <span>Relax</span>
+          <span class="gameSelectionText">Relax</span>
         </div>
         <div id="arcade">
-          <canvas id="arcadeCanvas"width="600" height="600"></canvas>
+          <canvas id="arcadeCanvas"width="600" height="495"></canvas>
+          <div id="myProgress">
+           <div id="myBar"></div>
+            <span>Valider</span>
+          </div>
+        </div>
         <div id="relax">
         </div>
       </div>
     </div>
+    <div id="Go">
+      <span>Ready ?</span>
+    </div>
+    <div id="result">
+      <div></div>
+    </div>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="scripts/homepage.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/canvas.js"></script>
-    <script src="scripts/drawer.js"></script>
-    <script src="scripts/pixelCounter.js"></script>
+    <script src="scripts/canvasTools.js"></script>
   </body>
 </html>

@@ -2,41 +2,137 @@ function randomCanvas(){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   //let randomCanvas = Math.floor(Math.random()*2)+1
-  let randomCanvas = 3
+  let randomCanvas = 4
   console.log(randomCanvas)
-  if (randomCanvas==1) {
-    ctx.beginPath();
-    ctx.moveTo(25, 25);
-    ctx.lineTo(105, 25);
-    ctx.lineTo(25, 105);
+  if (randomCanvas == 1) {
     ctx.fillStyle = "white";
-    ctx.fill();
-    // Triangle filaire
+    ctx.strokeStyle = '#000000';
     ctx.beginPath();
-    ctx.moveTo(125, 125);
-    ctx.lineTo(125, 45);
-    ctx.lineTo(45, 125);
-    ctx.closePath();
+    ctx.moveTo(258, 63);
+    ctx.lineTo(136, 297);
     ctx.stroke();
-  }
-  else if (randomCanvas==2){
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
     ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fillStyle = "white";
-    ctx.fill();
+    ctx.moveTo(135, 297);
+    ctx.lineTo(392, 295);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(259, 66);
+    ctx.lineTo(393, 295);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(258, 62);
+    ctx.lineTo(393, 296);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(244, 298);
+    ctx.lineTo(245, 337);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(246, 334);
+    ctx.lineTo(273, 334);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(273, 333);
+    ctx.lineTo(273, 299);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(275, 335);
+    ctx.lineTo(275, 334);
+    ctx.stroke();
+    ctx.lineTo(275, 333);
+    ctx.stroke();
+    ctx.lineTo(275, 331);
+    ctx.stroke();
+    ctx.lineTo(275, 329);
+    ctx.stroke();
+    ctx.lineTo(275, 326);
+    ctx.stroke();
+    ctx.lineTo(275, 324);
+    ctx.stroke();
+    ctx.lineTo(275, 322);
+    ctx.stroke();
+    ctx.lineTo(275, 320);
+    ctx.stroke();
+    ctx.lineTo(275, 319);
+    ctx.stroke();
+    ctx.lineTo(275, 317);
+    ctx.stroke();
+    ctx.lineTo(275, 315);
+    ctx.stroke();
+    ctx.lineTo(275, 314);
+    ctx.stroke();
+    ctx.lineTo(275, 312);
+    ctx.stroke();
+    ctx.lineTo(275, 311);
+    ctx.stroke();
+    ctx.lineTo(275, 310);
+    ctx.stroke();
+    ctx.lineTo(275, 309);
+    ctx.stroke();
+    ctx.lineTo(275, 307);
+    ctx.stroke();
+    ctx.lineTo(275, 306);
+    ctx.stroke();
+    ctx.lineTo(275, 305);
+    ctx.stroke();
+    ctx.lineTo(275, 304);
+    ctx.stroke();
+    ctx.lineTo(275, 303);
+    ctx.stroke();
+    ctx.lineTo(275, 302);
+    ctx.stroke();
+    ctx.lineTo(275, 301);
+    ctx.stroke();
+    ctx.lineTo(275, 301);
+    ctx.stroke();
+    ctx.lineTo(275, 300);
+    ctx.stroke();
+    ctx.lineTo(275, 299);
+    ctx.stroke();
+    ctx.lineTo(275, 299);
+    ctx.stroke();
+    ctx.lineTo(275, 298);
+    ctx.stroke();
+    ctx.lineTo(275, 297);
+    ctx.stroke();
+    ctx.lineTo(275, 297);
+    ctx.stroke();
+    ctx.strokeStyle = '#000000';
+    ctx.beginPath();
+    ctx.moveTo(275, 297);
+    ctx.lineTo(275, 297);
+    ctx.stroke();
+    ctx.fill()
   }
+  else if(randomCanvas==2){
+    ctx.fillStyle="white";
+    ctx.strokeStyle = '#000000';
+    ctx.arc(300, 250, 192, 0, 6.283185307179586, false);
+    ctx.stroke();
+    ctx.fill()
+  }
+  // Rectangle
   else if(randomCanvas==3){
     ctx.fillStyle = "white";
     ctx.rect(50, 100, 500, 250);
     ctx.fill();
     ctx.strokeRect(50, 100, 500, 250);
   }
+  // Bonhomme
   else if(randomCanvas==4){
     ctx.fillStyle = "white";
     ctx.strokeStyle="black";

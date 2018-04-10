@@ -1,7 +1,12 @@
 body{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   background: #FFFAFA;
   font-family: 'Open Sans', sans-serif;
-  font-size: 4em;
 }
 #game{
   margin: 250px auto 0px auto;
@@ -12,11 +17,16 @@ body{
   display:flex;
   height:500px;
 }
+.gameSelectionText{
+  font-size: 4em;
+}
 #menuColor1{
+  cursor: pointer;
+  color:white;
   display:flex;
   justify-content: space-around;
   align-items: center;
-  background: #ffeaa7;
+  background: #0984e3;
   width:50%;
   height:100%;
   transition: width 1s ease;
@@ -25,10 +35,11 @@ body{
   width: 100%;
 }
 #menuColor2{
+  cursor: pointer;
   display:flex;
   justify-content: space-around;
   align-items: center;
-  background:#fab1a0;
+  background:#fdcb6e;
   width:50%;
   height:100%;
   transition: width 1s ease;
@@ -37,7 +48,7 @@ body{
   width:100%;
 }
 #arcade{
-  background: #ffeaa7;
+  background: #0984e3;
   width:100%;
   height:100%;
   display: none;
@@ -48,4 +59,67 @@ body{
   width:100%;
   height:100%;
   display:none;
+}
+
+#myProgress{
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+    width: 70%;
+    height:50px;
+    background-color: #ffeaa7;
+}
+#myProgress:active{
+  transform:translateY(3px);
+}
+#myBar{
+  position:absolute;
+  top:0px;
+  width: 1%;
+  height: 100%;
+  background-color: red;
+}
+#myProgress span{
+  position:absolute;
+  right:43%;
+  font-size:2em;
+}
+#result{
+  position:fixed;
+  top:53%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 500px;
+  width:600px;
+  background:#0984e3;
+  display:none;
+}
+#result div{
+  color:white;
+  font-family: 'Jua', sans-serif;
+  margin:195px auto 0px auto;
+  font-size: 5em;
+  text-align: center;
+}
+#Go{
+  cursor: pointer;
+  position:fixed;
+  top:53%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 500px;
+  width:960px;
+  background:#0984e3;
+  display:none;
+  opacity:0.9;
+}
+#Go span{
+  color:white;
+  font-size: 5em;
+  font-weight: bold;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
