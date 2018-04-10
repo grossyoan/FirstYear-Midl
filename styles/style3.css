@@ -5,19 +5,33 @@ font-family: "Open Sans";
 body {
 	padding: 0;
 	margin: auto;
-	background-color: #FFFFFF;
-	width: 100%;
+	background-color: #7F7F7F;
 }
 
-/**
-			HEADER
-**/
-header{
-	background-color: #D980FA;
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+header .heading{
 	display: flex;
 	justify-content: space-around;
+	width: 100%;
+	height: 	68px;
 }
 
+.heading h1 {
+	color: red;
+	width: 50px;
+	height: 35px;
+	font-size: 20px;
+}
+nav{
+    background-color: rgba(90, 90, 90, 1);
+    height:68px;
+    width: 100%;
+    margin-bottom: 70px;
+}
 
 .menu{
     display: flex;
@@ -32,7 +46,7 @@ header{
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	margin:auto;
+	margin:0;
 	padding: 0;
 	list-style: none;
 }
@@ -51,6 +65,7 @@ header{
 .menu2 li{
 	display: flex;
 	align-items: center;
+	padding-left: 100px;
   height: 68px;
   line-height: 14px;
   color: white;
@@ -61,9 +76,7 @@ header{
 img{
 	width: 30px;
 }
-/**
-			MENU HEADER/FOOTER
-**/
+
 .menu a:hover {
     border-bottom: 3px solid white;
 }
@@ -78,43 +91,16 @@ img{
     text-decoration: none;
     padding-bottom: 4px;
 }
-/**
-			MENU FOOTER
-**/
+
 
 footer {
-	background-color: #D980FA;
+	display: flex;
+	justify-content: space-around;
 	list-style: none;
 	padding: 15px;
 	margin: 0;
 	position: absolute;
-	bottom: 0px;
+	bottom: -15px;
 	width: 100%;
-	left: 0px;
-	height:68px;
-}
-.footerUp{
-	display: flex;
-	flex-flow: row;
-	width: 100%;
-	padding-bottom: 40px;
-}
-
-.footerUp ul{
-	display: flex;
-	flex-flow: row;
-}
-
-li{
-	margin: 0;
-	padding: 0;
-}
-
-.footerRight ul{
-	display: flex;
-	justify-content: flex-end;
-}
-
-#searchbar{
-margin-bottom: 40px;
+	left: -16px;
 }
