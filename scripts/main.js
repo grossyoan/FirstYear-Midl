@@ -1,15 +1,17 @@
-$( document ).ready(function() {
+/*$( document ).ready(function() {
   countDown();
-});
+});*/
 $("#menuColor1").click(function(){ // Au lancement du mode arcade
-  document.getElementById('clickSound').play();
-  gameMode = 0;
-  $("#gameSelection").css('position','static');
+  $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
-  $("#settings").hide(300);
+  $("#settings").hide();
+  gameMode = 0;
+  getRandomCanvas();
+  drawCanvas(canvasNumber);
+  document.getElementById('clickSound').play();
+  $("#gameSelection").css('position','static');
   $("#menuColor2").hide(200);
   random = randomCanvas();
-  drawCanvas(random);
   $("#menuColor1").hide(200);
   setTimeout(function (){
     $("#arcade").toggle(300).css('background','#0984e3');
@@ -22,14 +24,15 @@ $("#menuColor1").click(function(){ // Au lancement du mode arcade
   }
 });
 $("#menuColor2").click(function(){ // Au lancement du mode relax
-  document.getElementById('clickSound').play();
+  $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
+  $("#settings").hide();
   gameMode = 1;
+  document.getElementById('clickSound').play();
   $("#gameSelection").css('position','static');
-  $("#settings").hide(300);
   $("#menuColor2").hide(200);
-  random = randomCanvas();
-  drawCanvas(random);
+  getRandomCanvas();
+  drawCanvas(canvasNumber);
   $("#menuColor2").hide(200);
   $("#menuColor1").hide(200);
   setTimeout(function (){
@@ -52,12 +55,6 @@ $("#Go").click(function(){ // Au clic sur le canva
     $("#myProgress").css('visibility', 'visible');
     init();
     progressBar();
-    setTimeout(function (){
-      if (timePassed>= 6 && timePassed<= 9 ){
-        isFinished()
-      }
-      }, 7000);
-
   }
   else{
     document.getElementById('relaxMusic').play();
@@ -91,7 +88,10 @@ $("#homeButton").click(function(){ // Au retour au menu
   $("#arcade").hide();
   $("#menuColor1").toggle(500);
   $("#menuColor2").toggle(500);
-  $("#settings").toggle(500);
+  setTimeout(function (){
+    $("#settings").toggle(500);
+    $("#cupButton").toggle(500);
+  }, 500);
 
   fromRestart=true;
 });
@@ -99,7 +99,7 @@ $("#homeButton").click(function(){ // Au retour au menu
 $("#nextButton").click(function(){ // Next level
   document.getElementById('clickSound').play();
   finished=false;
-  random = randomCanvas()
+  random = getRandomCanvas()
   drawCanvas(random)
   $("#result").hide(300);
   setTimeout(function (){
@@ -141,4 +141,16 @@ $("#roseCircle").click(function(){ // Settings
 });
 $("#redCircle").click(function(){ // Settings
   brushColor='#ED4C67';
+});
+$("#facebook").click(function(){ // Settings
+  window.open('https://www.facebook.com/BoringamesHETIC/');
+});
+$("#twitter").click(function(){ // Settings
+  window.open('https://twitter.com/BorinGamesHETIC/');
+});
+$("#instagram").click(function(){ // Settings
+  window.open('https://www.instagram.com/boringameshetic/');
+});
+$("#youtube").click(function(){ // Settings
+  window.open('https://www.youtube.com/channel/UChcgoViNgiLg2OHSHjYavmQ?disable_polymer=true/');
 });

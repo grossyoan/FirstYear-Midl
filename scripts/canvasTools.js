@@ -15,7 +15,9 @@ let canvas, ctx, flag = false,
     brushColor = "#FFC312",
     brushSize = 20;
     gameMode = 0;
-    let arcadeSound=1;
+    arcadeSound=1;
+    canvasArray= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+    scoreboardArray =[];
 
 function init() {
     canvas = document.getElementById('arcadeCanvas');
@@ -125,8 +127,9 @@ function progressBar() {
    function frame() {
        if (width >= 100 || finished==true) {
            clearInterval(id);
+           isFinished();
        } else {
-           width= width+0.17;
+           width= width+0.15;
            elem.style.width = width + '%';
        }
    }
@@ -175,8 +178,6 @@ function isFinished(){
       $("#result").toggle(200).css('background','#0984e3');
       document.getElementById('arcadeMusic').pause();
       document.getElementById('arcadeMusic').currentTime=0;
-
-
     }
     else{
       $("#result").toggle(200).css('background','#fdcb6e');
@@ -204,7 +205,7 @@ function randomCanvas(){
 }
 
 
-function countDown() {
+/*function countDown() {
   setInterval(function()
   {
     timePassed++;
@@ -216,7 +217,7 @@ function randomArcadeSound(){
   arcadeSound = Math.floor(Math.random()*3)+1;
 }
 
-/*function arcadeMusic(){
+function arcadeMusic(){
   randomArcadeSound();
   if(arcadeSound==0){
     document.getElementById('ArcadeS1').play();
@@ -236,4 +237,22 @@ function relaxMusic(){
     this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
   });
+}
+
+function getRandomCanvas(){
+  if(gameMode == 0){
+    canvasNumber = canvasArray.splice(0, 1);
+    console.log(canvasNumber)
+  }
+  if(gameMode == 1)
+  {
+    let random = Math.floor(Math.random()*canvasArray.length)
+    console.log(canvasArray)
+    canvasNumber = canvasArray.splice(random, 1);
+    console.log(canvasNumber)
+  }
+  if(canvasArray.length == 0){
+    canvasArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+  }
+  return canvasNumber;
 }
