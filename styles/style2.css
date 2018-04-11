@@ -13,29 +13,35 @@ body {
 			HEADER
 **/
 header{
-	background-color: #D980FA;
+	background-color: #fab1a0;
 	display: flex;
 	justify-content: space-around;
 }
-
 
 .menu{
     display: flex;
     align-items: center;
     flex-direction: row;
+		justify-content: space-around;
     margin:0;
     padding: 0;
     list-style: none;
 }
+#icon{
+	float: right;
+}
 
 .menu2{
 	display: flex;
-	align-items: center;
-	flex-direction: row;
+	align-items: center ;
+	flex-direction: row ;
 	margin:auto;
 	padding: 0;
 	list-style: none;
+	background: #fab1a0;
+	width: 100%
 }
+
 
 .menu li{
 	display: flex;
@@ -54,7 +60,7 @@ header{
   height: 68px;
   line-height: 14px;
   color: white;
-  width:83px;
+  width:60px;
   font-size: 12px;
 }
 
@@ -81,17 +87,20 @@ img{
 /**
 			MENU FOOTER
 **/
-
+#padd{
+	margin-right: 50px
+}
 footer {
-	background-color: #D980FA;
+	background-color: #fab1a0;
 	list-style: none;
-	padding: 15px;
+	padding: 0px;
 	margin: 0;
 	position: absolute;
 	bottom: 0px;
+	margin-bottom: 0px;
 	width: 100%;
 	left: 0px;
-	height:68px;
+	height: 60px;
 }
 .footerUp{
 	display: flex;
@@ -103,18 +112,23 @@ footer {
 .footerUp ul{
 	display: flex;
 	flex-flow: row;
+	margin: 0
 }
 
 li{
 	margin: 0;
 	padding: 0;
 }
-
-.footerRight ul{
-	display: flex;
-	justify-content: flex-end;
+div.footerRight{
+display: flex;
+justify-content: flex-end;
+width: 40%;
 }
 
-#searchbar{
-margin-bottom: 40px;
+.footerRight a{
+width: 40px;
+}
+
+div#searchbar{
+width: 36%
 }

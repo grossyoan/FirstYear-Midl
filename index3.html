@@ -11,12 +11,12 @@
     <header>
         <div class="header">
             <ul class="menu">
-              <li> <a href="#"> My Account </a> </li>
+              <li> <a href="#"> Mon compte </a> </li>
               <li><h2>LOGO</h2></li>
-              <li> <a href="#"> Other Games </a> </li>
-              <li> <a href="index3.html"><img src="img/franceFlag.png" width=50px href="#"></a> </li>
-            <li><a href="index2.html"> <img src="img/UKflag.png" width=50px href="#"></a> </li>
-              <li> <img src="img/help.png" width=50px href="#"> </li>
+              <li> <a href="#"> Autres jeux </a> </li>
+              <li> <a href="index3.html"><img src="img/franceFlag.png" width=50px href="#" id="icon"></a> </li>
+            <li><a href="index2.html"> <img src="img/UKflag.png" width=50px href="#" id="icon"></a> </li>
+              <li> <a href="#"><img src="img/help.png" width=50px href="#" id="icon"></a> </li>
             </ul>
         </div>
     </header>
@@ -25,28 +25,30 @@
     </main>
     <footer>
       <nav class="menu2">
+        <div class="footerUp">
+          <ul>
+            <li> <a href="#"> <img src="img/facebook.png"> </a> </li>
+            <li> <a href="#"> <img src="img/twitter.png"> </a> </li>
+            <li> <a href="#"> <img src="img/insta.png"> </a> </li>
+            <li> <a href="#"> <img src="img/snap.png"> </a> </li>
+            <li> <a href="#"> <img src="img/playStore.png"> </a> </li>
+          </ul>
+          <div class="footerRight">
+              <h5><a href="#"id="padd"> Supportez-nous </a></h5>
+              <h5><a href="#"> A propos de nous </a></h5>
+          </div>
         <ul>
-          <li> <a href="#"> <img src="img/facebook.png"> </a> </li>
-          <li> <a href="#"> <img src="img/twitter.png"> </a> </li>
-          <li> <a href="#"> <img src="img/insta.png"> </a> </li>
-          <li> <a href="#"> <img src="img/snap.png"> </a> </li>
-          <li> <a href="#"> <img src="img/playStore.png"> </a> </li>
-          <li><a href="#"> Support Us </a></li>
-          <li><a href="#"> About Us </a></li>
-        </ul>
-        <ul>
-          <li>Get the newsletter
-            <div id="searchbar">
+        </div>
+          <div id="searchbar">
+          <h4>S'abonner à la newsletter !</h4>
               <form action="" class="formulaire">
-              <input class="champ" type="text" value="Search"/>
-              <input class="bouton" type="button" value=" " />    
+              <input class="champ"type="text"value="youre email"/>
+              <input class="bouton" type="button" value="Envoyer"/>    
               </form>
             </div>
-          </li>
         </ul>
       </nav>
     </footer>
-    </div>
     <script src="scripts/app.js">
     </script>
   </body>
