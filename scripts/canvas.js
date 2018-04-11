@@ -1,8 +1,6 @@
-function randomCanvas(){
+function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
-  let randomCanvas = Math.floor(Math.random()*5)+1;
-  let previousCanvas=randomCanvas;
   if (randomCanvas == 1) {
     ctx.fillStyle="white";
     ctx.rect(150, 193, 323, 192);

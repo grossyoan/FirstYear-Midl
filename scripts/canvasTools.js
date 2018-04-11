@@ -9,6 +9,8 @@ let canvas, ctx, flag = false,
     isDrawing = false;
     finalScore = 0;
     finished = false;
+    canvasNumber = 0;
+    timePassed = 0;
 let x = "#fab1a0",
     brushSize = 20;
 
@@ -174,9 +176,25 @@ function isFinished(){
     setTimeout(function (){
       $("#arcadeCanvas").hide();
       clearCanvas();
+      timePassed=1000;
     }, 500);
+
   }
   else{
     console.log('ok');
   }
+}
+
+function randomCanvas(){
+  canvasNumber = Math.floor(Math.random()*5)+1;
+  return canvasNumber
+}
+
+
+function countDown() {
+  setInterval(function()
+  {
+    timePassed++;
+    console.log(timePassed);
+  },1000);
 }

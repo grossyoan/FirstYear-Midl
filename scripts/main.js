@@ -1,6 +1,10 @@
+$( document ).ready(function() {
+  countDown();
+});
 $("#menuColor1").click(function(){ // Au lancement du mode arcade
   $("#menuColor2").hide(200);
-  randomCanvas();
+  random = randomCanvas()
+  drawCanvas(random)
   $("#menuColor2").hide(200);
   $("#menuColor1").hide(200);
   setTimeout(function (){
@@ -11,6 +15,7 @@ $("#menuColor1").click(function(){ // Au lancement du mode arcade
   isDrawing==true;
 });
 $("#Go").click(function(){ // Au clic sur le canva
+  timePassed=0;
   finished=false;
   if (isDrawing==false){
     $("#Go").hide();
@@ -18,9 +23,13 @@ $("#Go").click(function(){ // Au clic sur le canva
     init();
     progressBar();
     setTimeout(function (){
-      isFinished();
-    }, 7000);
-  }
+      if (timePassed>= 6 && timePassed<= 9 ) {
+        isFinished()
+      }
+      else {
+        return;
+      }
+    }, 7000);  }
   else{
   }
 });
@@ -43,7 +52,8 @@ $("#homeButton").click(function(){ // Au retour au menu
 
 $("#nextButton").click(function(){ // Next level
   finished=false;
-  randomCanvas();
+  random = randomCanvas()
+  drawCanvas(random)
   $("#result").hide(300);
   setTimeout(function (){
     $("#arcadeCanvas").toggle(300);
@@ -54,7 +64,7 @@ $("#nextButton").click(function(){ // Next level
 });
 
 $("#retryButton").click(function(){ // Retry level
-  randomCanvas();
+  drawCanvas(random)
   $("#result").hide(300);
   setTimeout(function (){
     $("#arcadeCanvas").toggle(300);
