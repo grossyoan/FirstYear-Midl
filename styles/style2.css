@@ -1,7 +1,9 @@
 * {
 font-family: "Open Sans";
 }
-
+html{
+	width: 100%;
+}
 body {
 	padding: 0;
 	margin: auto;
@@ -12,10 +14,20 @@ body {
 /**
 			HEADER
 **/
-header{
+div.link{
+float: left;
+margin-top: -50px;
+margin-left: 0px;
+}
+
+#icon{
+	margin-left: 30px;
+}
+.header{
 	background-color: #fab1a0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center space-between;
+	width: 100%;
 }
 
 .menu{
@@ -26,9 +38,6 @@ header{
     margin:0;
     padding: 0;
     list-style: none;
-}
-#icon{
-	float: right;
 }
 
 .menu2{
