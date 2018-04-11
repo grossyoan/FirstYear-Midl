@@ -11,8 +11,11 @@ let canvas, ctx, flag = false,
     finished = false;
     canvasNumber = 0;
     timePassed = 0;
-let x = "#fab1a0",
+    fromRestart = false;
+    brushColor = "#FFC312",
     brushSize = 20;
+    gameMode = 0;
+    let arcadeSound=1;
 
 function init() {
     canvas = document.getElementById('arcadeCanvas');
@@ -40,7 +43,7 @@ if (isDrawing==false){
       ctx.beginPath();
       ctx.moveTo(prevX, prevY);
       ctx.lineTo(currX, currY);
-      ctx.strokeStyle = x;
+      ctx.strokeStyle = brushColor;
       ctx.lineWidth = brushSize;
       ctx.stroke();
       ctx.closePath();
@@ -62,7 +65,7 @@ if (isDrawing==false){
           dot_flag = true;
           if (dot_flag && pixelData[0] == 255 && pixelData[1] == 255 && pixelData[2] == 255) {
               ctx.beginPath();
-              ctx.fillStyle = x;
+              ctx.fillStyle = brushColor;
               ctx.fillRect(currX, currY, 2, 2);
               ctx.closePath();
               dot_flag = false;
@@ -123,7 +126,7 @@ function progressBar() {
        if (width >= 100 || finished==true) {
            clearInterval(id);
        } else {
-           width= width+0.15;
+           width= width+0.17;
            elem.style.width = width + '%';
        }
    }
@@ -168,7 +171,17 @@ function pause(milliseconds){
 
 function isFinished(){
   if(finished==false){
-    $("#result").toggle(200);
+    if(gameMode==0){
+      $("#result").toggle(200).css('background','#0984e3');
+      document.getElementById('arcadeMusic').pause();
+      document.getElementById('arcadeMusic').currentTime=0;
+
+
+    }
+    else{
+      $("#result").toggle(200).css('background','#fdcb6e');
+
+    }
     scoreCount();
     displayScore();
     $("#myProgress").css('visibility','hidden');
@@ -197,4 +210,30 @@ function countDown() {
     timePassed++;
     console.log(timePassed);
   },1000);
+}
+
+function randomArcadeSound(){
+  arcadeSound = Math.floor(Math.random()*3)+1;
+}
+
+/*function arcadeMusic(){
+  randomArcadeSound();
+  if(arcadeSound==0){
+    document.getElementById('ArcadeS1').play();
+  }
+  else if(arcadeSound==1){
+    document.getElementById('ArcadeS2').play();
+  }
+  else{
+    document.getElementById('ArcadeS3').play();
+
+  }
+}
+*/
+
+function relaxMusic(){
+    $('audio').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+  });
 }

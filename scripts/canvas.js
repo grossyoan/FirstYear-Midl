@@ -2,6 +2,7 @@ function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   if (randomCanvas == 1) {
+    ctx.strokeStyle="black";
     ctx.fillStyle="white";
     ctx.rect(150, 193, 323, 192);
     ctx.strokeRect(150, 193, 323, 192);
@@ -20,12 +21,14 @@ function drawCanvas(randomCanvas){
   else if(randomCanvas==2){
   //Cercle
     ctx.fillStyle="white";
+    ctx.strokeStyle="black";
     ctx.arc(300, 250, 192, 0, 6.283185307179586, false);
     ctx.stroke();
     ctx.fill()
   }
   // Rectangle
   else if(randomCanvas==3){
+    ctx.strokeStyle="black";
     ctx.fillStyle = "white";
     ctx.rect(0, 70, 750, 350);
     ctx.fill();
@@ -51,6 +54,7 @@ function drawCanvas(randomCanvas){
     ctx.rect(73, 355, 436, 99);
   }
   else if(randomCanvas==5){
+    ctx.strokeStyle="black";
     ctx.fillStyle="white";
     ctx.beginPath();
     ctx.arc(310, 260, 225, 0, 6.283185307179586, false);
