@@ -94,10 +94,10 @@ body{
 }
 #result{
   position:fixed;
-  top:49.7%;
+  top:48%;
   left:50%;
   transform: translate(-50%,-50%);
-  height:500px;
+  height: 503px;
   width:960px;
   background:#0984e3;
   display:none;
@@ -129,10 +129,10 @@ body{
 #Go{
   cursor: pointer;
   position:fixed;
-  top:49.7%;
+  top:48%;
   left:50%;
   transform: translate(-50%,-50%);
-  height: 500px;
+  height: 503px;
   width:960px;
   background:#0984e3;
   display:none;
@@ -199,10 +199,10 @@ body{
 }
 #scoreBoard{
   position:fixed;
-  top:49.7%;
+  top:48%;
   left:50%;
   transform: translate(-50%,-50%);
-  height: 500px;
+  height: 503px;
   width:960px;
   background:#0984e3;
   display:none;
