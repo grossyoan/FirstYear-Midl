@@ -194,7 +194,7 @@ function isFinished(){
     setTimeout(function (){
       clearCanvas();
       timePassed=1000;
-    }, 500);
+    }, 200);
 
   }
   else{

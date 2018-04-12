@@ -7,20 +7,19 @@ function drawCanvas(randomCanvas){
     if(resolution<1300){
       ctx.strokeStyle="black";
       ctx.fillStyle="white";
-      ctx.rect(120, 154, 258, 153);
-      ctx.strokeRect(120, 154, 258, 153);
-      ctx.rect(209, 118, 80, 36);
-      ctx.strokeRect(209, 118, 80, 36);
-      ctx.rect(80, 206, 40, 56);
-      ctx.strokeRect(80, 206, 40, 56);
-      ctx.rect(376, 206, 40, 59);
-      ctx.strokeRect(376, 206, 40, 59);
-      ctx.rect(208, 208, 0, 0);
-      ctx.strokeRect(208, 208, 0, 0);
-      ctx.rect(204, 308, 86, 37);
-      ctx.strokeRect(204, 308, 86, 37);
+      ctx.strokeRect(139, 100, 120, 99);
+      ctx.rect(139, 100, 120, 99);
+      ctx.strokeRect(257, 198, 123, 105);
+      ctx.rect(257, 198, 123, 105);
+      ctx.strokeRect(382, 97, 108, 100);
+      ctx.rect(382, 97, 108, 100);
+      ctx.strokeRect(138, 301, 118, 94);
+      ctx.rect(138, 301, 118, 94);
+      ctx.strokeRect(378, 300, 120, 103);
+      ctx.rect(378, 300, 120, 103);
       ctx.fill()
     }
+    else{
     //No name
     ctx.strokeStyle="black";
     ctx.fillStyle="white";
@@ -37,6 +36,7 @@ function drawCanvas(randomCanvas){
     ctx.rect(256, 385, 108, 47);
     ctx.strokeRect(256, 385, 108, 47);
     ctx.fill()
+    }
   }
   else if(randomCanvas==2){
   //Cercle
