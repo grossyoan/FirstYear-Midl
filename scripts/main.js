@@ -1,6 +1,12 @@
-  /*$( document ).ready(function() {
-  countDown();
-});*/
+  $( document ).ready(function() {
+    resolution=window.screen.availWidth;
+    console.log(resolution);
+    if(resolution<1300){
+    $("#arcadeCanvas").attr("width",450);
+    $("#arcadeCanvas").attr("height", 371);
+    }
+
+});
 $("#menuColor1").click(function(){ // Au lancement du mode arcade
   clearCanvas();
   $("#cupButton").css('display','none');

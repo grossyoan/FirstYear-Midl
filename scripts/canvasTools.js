@@ -18,6 +18,7 @@ let canvas, ctx, flag = false,
     arcadeSound=1;
     canvasArray= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
     scoreboardArray =[];
+    resolution=0;
 
 function init() {
     canvas = document.getElementById('arcadeCanvas');
@@ -240,7 +241,6 @@ function relaxMusic(){
     this.currentTime = 0; // Reset time
   });
 }
-
 function getRandomCanvas(){
   if(gameMode == 0){
     canvasNumber = canvasArray.splice(0, 1);

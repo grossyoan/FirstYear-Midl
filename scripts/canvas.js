@@ -4,6 +4,9 @@ function drawCanvas(randomCanvas){
   ctx.lineWidth = 5;
   if(randomCanvas == 1){
     //No name
+    if(resolution<1300){
+      ctx.scale(0.7,0.7)
+    }
     ctx.strokeStyle="black";
     ctx.fillStyle="white";
     ctx.rect(150, 193, 323, 192);
