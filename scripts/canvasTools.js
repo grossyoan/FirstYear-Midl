@@ -190,8 +190,8 @@ function isFinished(){
     displayScore();
     $("#myProgress").css('visibility','hidden');
     finished=true;
+    $("#arcadeCanvas").hide();
     setTimeout(function (){
-      $("#arcadeCanvas").hide();
       clearCanvas();
       timePassed=1000;
     }, 500);

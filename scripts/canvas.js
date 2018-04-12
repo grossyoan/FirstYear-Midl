@@ -2,11 +2,26 @@ function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   ctx.lineWidth = 5;
+  randomCanvas=1;
   if(randomCanvas == 1){
-    //No name
     if(resolution<1300){
-      ctx.scale(0.7,0.7)
+      ctx.strokeStyle="black";
+      ctx.fillStyle="white";
+      ctx.rect(120, 154, 258, 153);
+      ctx.strokeRect(120, 154, 258, 153);
+      ctx.rect(209, 118, 80, 36);
+      ctx.strokeRect(209, 118, 80, 36);
+      ctx.rect(80, 206, 40, 56);
+      ctx.strokeRect(80, 206, 40, 56);
+      ctx.rect(376, 206, 40, 59);
+      ctx.strokeRect(376, 206, 40, 59);
+      ctx.rect(208, 208, 0, 0);
+      ctx.strokeRect(208, 208, 0, 0);
+      ctx.rect(204, 308, 86, 37);
+      ctx.strokeRect(204, 308, 86, 37);
+      ctx.fill()
     }
+    //No name
     ctx.strokeStyle="black";
     ctx.fillStyle="white";
     ctx.rect(150, 193, 323, 192);
