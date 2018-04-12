@@ -2,21 +2,14 @@ function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   ctx.lineWidth = 5;
-  randomCanvas=1;
+  randomCanvas=3;
   if(randomCanvas == 1){
     if(resolution<1300){
+      //Rectangle
       ctx.strokeStyle="black";
       ctx.fillStyle="white";
-      ctx.strokeRect(139, 100, 120, 99);
-      ctx.rect(139, 100, 120, 99);
-      ctx.strokeRect(257, 198, 123, 105);
-      ctx.rect(257, 198, 123, 105);
-      ctx.strokeRect(382, 97, 108, 100);
-      ctx.rect(382, 97, 108, 100);
-      ctx.strokeRect(138, 301, 118, 94);
-      ctx.rect(138, 301, 118, 94);
-      ctx.strokeRect(378, 300, 120, 103);
-      ctx.rect(378, 300, 120, 103);
+      ctx.strokeRect(80, 122, 279, 159);
+      ctx.rect(80, 122, 279, 159);
       ctx.fill()
     }
     else{
@@ -39,30 +32,60 @@ function drawCanvas(randomCanvas){
     }
   }
   else if(randomCanvas==2){
-  //Cercle
-    ctx.fillStyle="white";
-    ctx.strokeStyle="black";
-    ctx.arc(300, 250, 192, 0, 6.283185307179586, false);
-    ctx.stroke();
-    ctx.fill()
+    if(resolution<1300){
+      //9
+      ctx.strokeStyle="black";
+      ctx.fillStyle="white";
+      ctx.strokeRect(95, 123, 95, 91);
+      ctx.rect(95, 123, 95, 91);
+      ctx.strokeRect(178, 123, 12, 233);
+      ctx.rect(178, 123, 12, 233);
+      ctx.strokeRect(95, 331, 95, 24);
+      ctx.rect(95, 331, 95, 24);
+      ctx.strokeRect(125, 156, 30, 24);
+      ctx.rect(125, 156, 30, 24);
+      ctx.fill()
+    }
+    else{
+    //Cercle
+      ctx.fillStyle="white";
+      ctx.strokeStyle="black";
+      ctx.arc(300, 250, 192, 0, 6.283185307179586, false);
+      ctx.stroke();
+      ctx.fill()
+    }
   }
-  // Carré
   else if(randomCanvas==3){
-    ctx.strokeStyle="black";
-    ctx.fillStyle = "white";
-    ctx.strokeRect(97, 55, 424, 389);
-    ctx.rect(97, 55, 424, 389);
-    ctx.strokeRect(156, 121, 351, 307);
-    ctx.rect(156, 121, 351, 307);
-    ctx.strokeRect(417, 235, 2, 144);
-    ctx.rect(417, 235, 2, 144);
-    ctx.strokeRect(356, 300, 126, 1);
-    ctx.rect(356, 300, 126, 1);
-    ctx.strokeRect(201, 197, 117, 1);
-    ctx.rect(201, 197, 117, 1);
-    ctx.strokeRect(258, 148, 1, 107);
-    ctx.rect(258, 148, 1, 107);
-    ctx.fill();
+    if(resolution<1300){
+      //4
+      ctx.strokeStyle="black";
+      ctx.fillStyle = "white";
+      ctx.strokeRect(107, 141, 30, 228);
+      ctx.rect(107, 141, 30, 228);
+      ctx.strokeRect(107, 334, 195, 35);
+      ctx.rect(107, 334, 195, 35);
+      ctx.strokeRect(224, 264, 31, 179);
+      ctx.rect(224, 264, 31, 179);
+      ctx.fill();
+    }
+    else{
+      // Carré
+      ctx.strokeStyle="black";
+      ctx.fillStyle = "white";
+      ctx.strokeRect(97, 55, 424, 389);
+      ctx.rect(97, 55, 424, 389);
+      ctx.strokeRect(156, 121, 351, 307);
+      ctx.rect(156, 121, 351, 307);
+      ctx.strokeRect(417, 235, 2, 144);
+      ctx.rect(417, 235, 2, 144);
+      ctx.strokeRect(356, 300, 126, 1);
+      ctx.rect(356, 300, 126, 1);
+      ctx.strokeRect(201, 197, 117, 1);
+      ctx.rect(201, 197, 117, 1);
+      ctx.strokeRect(258, 148, 1, 107);
+      ctx.rect(258, 148, 1, 107);
+      ctx.fill();
+    }
   }
   // Rectangle
   else if(randomCanvas==4){
