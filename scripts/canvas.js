@@ -2,7 +2,6 @@ function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   ctx.lineWidth = 5;
-  resolution=800;
   if(randomCanvas == 1){
     if(resolution<1300){
       //Rectangle
