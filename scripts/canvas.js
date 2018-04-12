@@ -2,6 +2,7 @@ function drawCanvas(randomCanvas){
   let c = document.querySelector("canvas");
   let ctx = c.getContext("2d");
   ctx.lineWidth = 5;
+  resolution=800;
   if(randomCanvas == 1){
     if(resolution<1300){
       //Rectangle
@@ -184,7 +185,7 @@ function drawCanvas(randomCanvas){
       ctx.rect(247, 230, 17, 21);
 
     }
-  //F
+    //F
     else{
       ctx.strokeStyle="black";
       ctx.fillStyle = "white";
@@ -252,7 +253,7 @@ function drawCanvas(randomCanvas){
       ctx.strokeRect(267, 220, 74, 26);
       ctx.rect(267, 220, 74, 26);
     }
-  else{
+    else{
       //Tête de con
       ctx.strokeStyle="black";
       ctx.fillStyle="white";
@@ -281,7 +282,7 @@ function drawCanvas(randomCanvas){
       ctx.strokeRect(310, 90, 87, 73);
       ctx.strokeRect(204, 193, 158, 43);
     }
-  else{
+    else{
       //Chapeau de mexicain vu du dessus
       ctx.strokeStyle="black";
       ctx.fillStyle="white";
