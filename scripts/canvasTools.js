@@ -17,8 +17,8 @@ let canvas, ctx, flag = false,
     gameMode = 0;
     arcadeSound=1;
     canvasArray= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-    scoreboardArray =[];
     resolution=0;
+    finalScoreScoreboard=0;
 
 function init() {
     canvas = document.getElementById('arcadeCanvas');
@@ -139,6 +139,8 @@ function progressBar() {
 function displayScore(){
   let resultScore=document.querySelector('#resultScore');
   finalScore = Math.round((finalScore*10))/10;
+  finalScoreScoreboard = parseInt(finalScore);
+  scoreboard();
   resultScore.innerHTML=finalScore+'%';
   let resultMessage=document.querySelector('#resultMessage');
   if(finalScore==50){
@@ -257,10 +259,34 @@ function getRandomCanvas(){
   }
   return canvasNumber;
 }
-function scoreBoard(){
-  let score = document.querySelectorAll('.scoreboardLi');
-  let scoreHTML = new Array();
-  for(let i= 0; i<score.length;i++){
-  finalScore;
-  }
+
+function scoreboard(finalScoreScoreboard){
+	let score = document.querySelectorAll(".scoreboardLi");
+	let scoreHTML = new Array();
+	let finalScoreHTML = new Array();
+	let scorePushed = false;
+	for(let i = 0; i<score.length;i++){
+		scoreHTML[i] = score[i].innerHTML
+		scoreHTML[i] = parseInt(scoreHTML[i])
+	}
+	for(let j = 0; j<scoreHTML.length;j++){
+		if(finalScoreScoreboard>scoreHTML[j]&& scorePushed == false &&scoreHTML[j] != 0 ){
+		finalScoreHTML.push(scoreHTML[j])
+		}
+		if(finalScoreScoreboard<scoreHTML[j] || scoreHTML[j] == 0 && scorePushed == false){
+			finalScoreHTML.push(parseInt(finalScore))
+			j++
+			scorePushed = true;
+		}
+		if(scorePushed == true){
+			finalScoreHTML.push(scoreHTML[j-1])
+		}
+	}
+	for(let i = 0; i<score.length;i++){
+		scoreHTML[i] = score[i].innerHTML
+		scoreHTML[i] = parseInt(scoreHTML[i])
+	}
+	for(let k = 0; k<scoreHTML.length;k++){
+	 score[k].innerHTML = finalScoreHTML[k]
+	}
 }

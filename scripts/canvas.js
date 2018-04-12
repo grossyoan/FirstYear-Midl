@@ -7,8 +7,8 @@ function drawCanvas(randomCanvas){
       //Rectangle
       ctx.strokeStyle="black";
       ctx.fillStyle="white";
-      ctx.strokeRect(100, 122, 400, 300);
-      ctx.rect(100, 122, 400, 300);
+      ctx.strokeRect(50, 122, 400, 300);
+      ctx.rect(50, 122, 400, 300);
       ctx.fill()
     }
     else{
