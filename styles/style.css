@@ -17,7 +17,7 @@ body{
   margin-top:5px;
 }
 #logoGame img{
-  height:110px;
+  height:130px;
 }
 #game{
   margin:0 auto;
@@ -94,7 +94,7 @@ body{
 }
 #result{
   position:fixed;
-  top:410px;
+  top:390px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -129,7 +129,7 @@ body{
 #Go{
   cursor: pointer;
   position:fixed;
-  top:410px;
+  top:390px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -211,7 +211,7 @@ body{
 }
 #scoreBoard{
   position:fixed;
-  top:410px;
+  top:390px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 500px;
@@ -240,10 +240,10 @@ footer{
   padding-top:10px;
 }
 #socialMedias img{
-  height:70px;
+  height:60px;
 }
 #companyLogo{
-  width:230px;
+  width:190px;
 }
 #socialMedias{
   cursor: pointer;
