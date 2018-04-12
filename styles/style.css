@@ -94,7 +94,7 @@ body{
 }
 #result{
   position:fixed;
-  top:48%;
+  top:455px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -129,7 +129,7 @@ body{
 #Go{
   cursor: pointer;
   position:fixed;
-  top:48%;
+  top:455px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -199,10 +199,10 @@ body{
 }
 #scoreBoard{
   position:fixed;
-  top:48%;
+  top:455px;
   left:50%;
   transform: translate(-50%,-50%);
-  height: 503px;
+  height: 500px;
   width:960px;
   background:#0984e3;
   display:none;
