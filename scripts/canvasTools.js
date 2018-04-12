@@ -176,11 +176,13 @@ function isFinished(){
   if(finished==false){
     if(gameMode==0){
       $("#result").toggle(200).css('background','#0984e3');
+      $("#retryButton").css('display','none');
       document.getElementById('arcadeMusic').pause();
       document.getElementById('arcadeMusic').currentTime=0;
     }
     else{
       $("#result").toggle(200).css('background','#fdcb6e');
+      $("#retryButton").css('display','inline');
 
     }
     scoreCount();
@@ -242,17 +244,23 @@ function relaxMusic(){
 function getRandomCanvas(){
   if(gameMode == 0){
     canvasNumber = canvasArray.splice(0, 1);
-    console.log(canvasNumber)
+    console.log(canvasNumber);
   }
-  if(gameMode == 1)
-  {
+  if(gameMode == 1){
     let random = Math.floor(Math.random()*canvasArray.length)
-    console.log(canvasArray)
+    console.log(canvasArray);
     canvasNumber = canvasArray.splice(random, 1);
-    console.log(canvasNumber)
+    console.log(canvasNumber);
   }
   if(canvasArray.length == 0){
     canvasArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
   }
   return canvasNumber;
+}
+function scoreBoard(){
+  let score = document.querySelectorAll('.scoreboardLi');
+  let scoreHTML = new Array();
+  for(let i= 0; i<score.length;i++){
+  finalScore;
+  }
 }

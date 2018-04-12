@@ -1,7 +1,8 @@
-/*$( document ).ready(function() {
+  /*$( document ).ready(function() {
   countDown();
 });*/
 $("#menuColor1").click(function(){ // Au lancement du mode arcade
+  clearCanvas();
   $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
   $("#brushSize").css('display','none');
@@ -25,6 +26,7 @@ $("#menuColor1").click(function(){ // Au lancement du mode arcade
   }
 });
 $("#menuColor2").click(function(){ // Au lancement du mode relax
+  clearCanvas();
   $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
   $("#brushSize").css('display','none');
@@ -94,7 +96,6 @@ $("#homeButton").click(function(){ // Au retour au menu
     $("#settings").toggle(500);
     $("#cupButton").toggle(500);
   }, 500);
-
   fromRestart=true;
 });
 
@@ -114,7 +115,7 @@ $("#nextButton").click(function(){ // Next level
 
 $("#retryButton").click(function(){ // Retry level
   document.getElementById('clickSound').play();
-  drawCanvas(random)
+  drawCanvas(canvasNumber);
   $("#result").hide(300);
   setTimeout(function (){
     $("#arcadeCanvas").toggle(300);

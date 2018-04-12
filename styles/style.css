@@ -253,3 +253,8 @@ footer{
   height:60px;
   left:5px;
 }
+@media only screen and (max-width: 2000px){
+  #logoGame img{
+    height:120px;
+  }
+}
