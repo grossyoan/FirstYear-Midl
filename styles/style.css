@@ -14,8 +14,7 @@ body{
 #logoGame{
   width:100%;
   text-align:center;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top:5px;
 }
 #logoGame img{
   height:150px;
@@ -95,7 +94,7 @@ body{
 }
 #result{
   position:fixed;
-  top:455px;
+  top:410px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -130,7 +129,7 @@ body{
 #Go{
   cursor: pointer;
   position:fixed;
-  top:455px;
+  top:410px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 503px;
@@ -212,7 +211,7 @@ body{
 }
 #scoreBoard{
   position:fixed;
-  top:455px;
+  top:410px;
   left:50%;
   transform: translate(-50%,-50%);
   height: 500px;
