@@ -4,6 +4,7 @@
 $("#menuColor1").click(function(){ // Au lancement du mode arcade
   $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
+  $("#brushSize").css('display','none');
   $("#settings").hide();
   gameMode = 0;
   getRandomCanvas();
@@ -26,6 +27,7 @@ $("#menuColor1").click(function(){ // Au lancement du mode arcade
 $("#menuColor2").click(function(){ // Au lancement du mode relax
   $("#cupButton").css('display','none');
   $("#settingsImg").css('display','none');
+  $("#brushSize").css('display','none');
   $("#settings").hide();
   gameMode = 1;
   document.getElementById('clickSound').play();
@@ -125,32 +127,62 @@ $("#retryButton").click(function(){ // Retry level
 $("#settingsButton").click(function(){ // Settings
   document.getElementById('clickSound').play();
   $("#settingsImg").toggle(300);
+  $("#brushSize").toggle(300);
+  $("#brushSize").css('display','flex');
 });
 
-$("#orangeCircle").click(function(){ // Settings
+$("#orangeCircle").click(function(){ // Orange brush
   brushColor='#FFC312';
 });
-$("#greenCircle").click(function(){ // Settings
+$("#greenCircle").click(function(){ // Green brush
   brushColor='#C4E538';
 });
-$("#blueCircle").click(function(){ // Settings
+$("#blueCircle").click(function(){ // Blue brush
   brushColor='#12CBC4';
 });
-$("#roseCircle").click(function(){ // Settings
+$("#roseCircle").click(function(){ // Rose brush
   brushColor='#FDA7DF';
 });
-$("#redCircle").click(function(){ // Settings
+$("#redCircle").click(function(){ // red brush
   brushColor='#ED4C67';
 });
-$("#facebook").click(function(){ // Settings
+$("#Brush01").click(function(){ // Brush 01
+  brushSize= 39;
+});
+$("#Brush02").click(function(){ // Brush 02
+  brushSize= 30;
+});
+$("#Brush03").click(function(){ // Brush 03
+  brushSize= 20;
+});
+$("#Brush04").click(function(){ // Brush 04
+  brushSize= 10;
+});
+$("#Brush05").click(function(){ // Brush 05
+  brushSize= 1;
+});
+$("#cupButton").click(function(){ // Scoreboard menu
+  document.getElementById('clickSound').play();
+  $("#settings").toggle(300);
+  $("#cupButton").toggle(200);
+  $("#scoreBoard").toggle(200);
+});
+$("#homeButtonScoreboard").click(function(){ // Settings
+  document.getElementById('clickSound').play();
+  $("#scoreBoard").hide(300);
+  $("#settings").toggle(500);
+  $("#cupButton").toggle(500);
+});
+
+$("#facebook").click(function(){ // Facebook link
   window.open('https://www.facebook.com/BoringamesHETIC/');
 });
-$("#twitter").click(function(){ // Settings
+$("#twitter").click(function(){ // Twitter link
   window.open('https://twitter.com/BorinGamesHETIC/');
 });
-$("#instagram").click(function(){ // Settings
+$("#instagram").click(function(){ // Instagram link
   window.open('https://www.instagram.com/boringameshetic/');
 });
-$("#youtube").click(function(){ // Settings
+$("#youtube").click(function(){ // Youtube link
   window.open('https://www.youtube.com/channel/UChcgoViNgiLg2OHSHjYavmQ?disable_polymer=true/');
 });
