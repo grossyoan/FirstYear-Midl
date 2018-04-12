@@ -163,6 +163,12 @@ body{
   cursor: pointer;
   display: none;
 }
+#settingsImg img:hover{
+  transform: scale(1.5,1.5);
+}
+#settingsImg img:active{
+  transform: scale(1,1);
+}
 #brushSize{
   text-align: center;
   height:50px;
@@ -175,6 +181,12 @@ body{
 }
 #brushSize img{
   margin: 0 auto 3px auto;
+}
+#brushSize img:hover{
+  transform: scale(1.5,1.5);
+}
+#brushSize img:active{
+  transform: scale(1,1);
 }
 #Brush05{
   padding-left:1px;
